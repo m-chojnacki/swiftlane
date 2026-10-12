@@ -10,13 +10,13 @@
     "app-store-connect",
     "keychain"
   ],
-  "homepage": "https://github.com/m-chojnacki/sws#readme",
+  "homepage": "https://github.com/m-chojnacki/swiftlane#readme",
   "bugs": {
-    "url": "https://github.com/m-chojnacki/sws/issues"
+    "url": "https://github.com/m-chojnacki/swiftlane/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/m-chojnacki/sws.git"
+    "url": "git+https://github.com/m-chojnacki/swiftlane.git"
   },
   "license": "MIT",
   "author": "Marcin Chojnacki",
