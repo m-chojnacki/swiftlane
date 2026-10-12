@@ -1,0 +1,5 @@
+node_modules/
+dist/
+build/
+*.p8
+.DS_Store

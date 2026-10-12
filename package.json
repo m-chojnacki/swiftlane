@@ -1,0 +1,55 @@
+{
+  "name": "swiftlane",
+  "version": "0.1.0",
+  "description": "All-you-need CLI for building Xcode projects on CI: keychains, signing, archiving and App Store Connect upload with just an App Store Connect API key",
+  "keywords": [
+    "xcode",
+    "ios",
+    "ci",
+    "codesigning",
+    "app-store-connect",
+    "keychain"
+  ],
+  "homepage": "https://github.com/m-chojnacki/sws#readme",
+  "bugs": {
+    "url": "https://github.com/m-chojnacki/sws/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m-chojnacki/sws.git"
+  },
+  "license": "MIT",
+  "author": "Marcin Chojnacki",
+  "type": "module",
+  "bin": {
+    "swiftlane": "dist/cli.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "os": [
+    "darwin"
+  ],
+  "scripts": {
+    "start": "node src/cli.ts",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test test/*.test.ts",
+    "prepare": "npm run build",
+    "lint": "biome check .",
+    "format": "biome check --write ."
+  },
+  "dependencies": {
+    "commander": "^15.0.0",
+    "node-forge": "^1.4.0"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/node": "^24.19.2",
+    "@types/node-forge": "^1.3.14",
+    "typescript": "^7.0.2"
+  }
+}
