@@ -1,5 +1,5 @@
 {
-  "name": "swiftlane",
+  "name": "@m-chojnacki/swiftlane",
   "version": "0.1.0",
   "description": "All-you-need CLI for building Xcode projects on CI: keychains, signing, archiving and App Store Connect upload with just an App Store Connect API key",
   "keywords": [

@@ -5,10 +5,11 @@ All-you-need CLI for building Xcode projects on CI. Not a fastlane replacement, 
 **All you need is an App Store Connect API key.**
 
 ```sh
-npx swiftlane keychain init
-npx swiftlane signing sync
-npx swiftlane archive
-npx swiftlane upload
+npm install -g @m-chojnacki/swiftlane
+swiftlane keychain init
+swiftlane signing sync
+swiftlane archive
+swiftlane upload
 ```
 
 ## Why
@@ -143,13 +144,14 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - run: npx swiftlane keychain init
-      - run: npx swiftlane signing sync
-      - run: npx swiftlane version set -b ${{ github.run_number }}
-      - run: npx swiftlane archive
-      - run: npx swiftlane upload
+      - run: npm install -g @m-chojnacki/swiftlane
+      - run: swiftlane keychain init
+      - run: swiftlane signing sync
+      - run: swiftlane version set -b ${{ github.run_number }}
+      - run: swiftlane archive
+      - run: swiftlane upload
       - if: always()
-        run: npx swiftlane keychain drop
+        run: swiftlane keychain drop
 ```
 
 Commands write GitHub Actions step outputs where useful: `keychain-path`, `certificate-id`, `identity`, `archive-path`, `ipa-path`, `result-bundle`, `marketing-version` and `build-number`.
