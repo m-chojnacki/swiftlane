@@ -112,6 +112,10 @@ Uploads to App Store Connect / TestFlight:
 
 Runs `xcodebuild test` on the newest available simulator for the scheme's platform, or on `-d, --destination`. Results go to `build/<project>.xcresult`. Supports `--test-plan`, `--only-testing` and `--skip-testing` (both repeatable). No API key needed.
 
+### `swiftlane clean`
+
+Deletes the build directory (`-b`, default `build`) with archives, exports, test results, DerivedData and logs. Paths that contain the current directory or your home folder are refused.
+
 ### `swiftlane version get` / `swiftlane version set`
 
 Thin wrapper around `agvtool`.

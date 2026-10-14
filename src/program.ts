@@ -1,6 +1,7 @@
 import { readFileSync } from 'node:fs';
 import { Command } from 'commander';
 import { archiveCommand } from './commands/archive.ts';
+import { cleanCommand } from './commands/clean.ts';
 import { exportCommand } from './commands/export.ts';
 import { keychainCommand } from './commands/keychain.ts';
 import { signingCommand } from './commands/signing.ts';
@@ -27,6 +28,7 @@ export function createProgram(): Command {
     .addCommand(exportCommand())
     .addCommand(uploadCommand())
     .addCommand(testCommand())
+    .addCommand(cleanCommand())
     .addCommand(versionCommand());
 
   addHelpCommands(program);
